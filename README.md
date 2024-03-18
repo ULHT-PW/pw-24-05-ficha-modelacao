@@ -18,71 +18,37 @@ Univesidade Lusófona
 
 ### 1. Exercícios de métodos ORM
 
-Crie uma aplicaçãoo com os seguintes modelos:
+Exercite os métodos de ORM Django na aplicação [biblioteca](https://bibliotecadeisi.pythonanywhere.com/shell/).
 
-```Python
-from django.db import models
-
-class Autor(models.Model):
-    nome = models.CharField(max_length=100)
-    data_nascimento = models.DateField()
-    nacionalidade = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.nome
-
-class Livro(models.Model):
-    titulo = models.CharField(max_length=200)
-    data_publicacao = models.DateField()
-    autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
-    genero = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.titulo
-
-class Leitor(models.Model):
-    nome = models.CharField(max_length=100)
-    email = models.EmailField()
-    data_associacao = models.DateField()
-
-    def __str__(self):
-        return self.nome
-
-class Emprestimo(models.Model):
-    livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
-    leitor = models.ForeignKey(Leitor, on_delete=models.CASCADE)
-    data_emprestimo = models.DateField()
-    data_devolucao = models.DateField(null=True, blank=True)
-
-    def __str__(self):
-        return f"{self.leitor} emprestou {self.livro}"
-```
-
-Implemente instruções que façam o seguinte:
-
-* Recuperar todos os autores de uma nacionalidade específica.
-* Encontrar o número total de livros emprestados por um determinado leitor.
-* Listar todos os livros emprestados a um leitor com um determinado endereço de e-mail.
-* Encontrar todos os livros publicados após uma data específica.
-* Recuperar todos os livros com seus autores e gêneros.
-* Listar todos os leitores que emprestaram livros publicados antes de 2010.
-* Encontrar o número de livros em cada gênero.
-* Listar todos os leitores que ainda não devolveram os livros emprestados.
-* Recuperar o autor de um livro específico.
-* Listar todos os leitores que emprestaram livros escritos por autores de uma nacionalidade específica.
 
 ### 2. Manipulação do modelo das bandas
 
-Para a modelação das bandas que realizou na ficha anterior, redija um conjunto de perguntas sobre os dados às quais deverá responder usando os métodos ORM que aprendeu. Crie pelo menos 10 perguntas que explorem todos os métodos do ORM Django. Exemplos de perguntas: 
+Para a modelação das bandas que realizou na ficha anterior, partilhe-a com o ChatGPT e peça-lhe para fazer um JSON com 5 bandas de um género que gosta (por exemplo rock, ou funck, ou pop). Peça para identifdicar  a nacionalidade e ano de criação da banda), listando 15 discos dessas bandas, com o ano do lançamento e incluindo a lista de musicas de cada disco, incluindo a duração de cada musica.
+
+Carregue estes ficheiros na base de dados usando um script (ficheiro python) que deverá manipular através da shell:
+
+```Bash
+> python manage.py shell
+```
+
+Na shell importar os modelos, o script, e correr a função, considerando que o ficheiro json está na pasta do script:
+```Python
+>>> from curso.models import *
+>>> import script_importacao.py
+>>> importar_curso("lei.json")
+```
+
+redija 10 perguntas, às quais deverá responder usando os métodos ORM que aprendeu. Exemplos de perguntas: 
 * listar o nome dos álbuns de uma banda, ordenados cronológicamente
-* apresentar todos os álbuns lançados em 2020
-* uma playlist de um album, i.e., a lista dos links das músicas.
+* apresentar todos os álbuns lançados num determinado ano
+* criar uma playlist de um album, i.e., a lista dos links das músicas.
 * listar os albuns com músicas que durem mais de 5 minutos
-* listar os albuns com capa
+
+Irá desenvolver daqui a umas semanas esta aplicação, criando uma página de bandas de um estilo que gosta, integrando um player.
 
 ### 3. Aplicação curso (componente do projeto parte 1)
 
-A modelação que desenvolverá será usada na parte 1 do seu projeto, que será o seu portfólio.
+A modelação que desenvolverá neste exercício será usada na parte 1 do seu projeto, que será o seu portfólio.
 
 A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](lei.json) e [LIG](lig.json). Analise o conteúdo do JSON, que se encontra renderizado na página de [LEI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e de [LIG](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/).
 

@@ -15,60 +15,76 @@ Univesidade Lusófona
 * siga os passos do [tutorial](pw-24-04-criacao-de-app-no-pc.pdf) para criar uma primeira aplicação em Django no seu PC
 -->
 
-### 1. Aplicação Pessoas no PythonAnyWhere
+### s
 
-* siga os passos do [tutorial](pw-24-04-criacao-de-app-em-pythonanywhere.pdf) para criar uma primeira aplicação em Django diretamente no PythonAnyWhere
+Considere os seguintes modelos:
 
-### 2. Aplicação bandas
+```Python
+from django.db import models
 
-* seguindo os passos dos slides anteriores, a partir da parte 3 (slide 19), crie uma nova aplicação **bandas**:
-   1. `python manage.py startapp bandas`
-   1. em `project\settings.py`, adicione à lista `INSTALLED_APPS` a aplicação `bandas`. 
-* em models.py, crie um conjunto de classes que permitam definir bandas, seus álbuns e músicas. No final, não se esqueça de:
-   * registar cada uma das classes em admin.py
-   * migrar as alterações com makemigrations e migrate
-   * relançar a aplicação
-* Em relação a cada classe, crie um conjunto de atributos. Sugestões:
-   * guarde para cada álbum uma capa
-   * para algumas músicas guarde o link da música no spotify
-   * guarde uma foto da banda, e informações variadas
-* faça os passos makemigrations e migrate para migrar o models para a base de dados 
-* crie conteúdos de um par de bandas e seus discos e músicas através da aplicação admin.
-* configure a aplicação admin de modo a listar informação util e permitir pesquisas adequadas.
+class Autor(models.Model):
+    nome = models.CharField(max_length=100)
+    data_nascimento = models.DateField()
+    nacionalidade = models.CharField(max_length=100)
 
-Nota: daqui a algumas semanas irá construir a parte de front-end desta aplicação.
+    def __str__(self):
+        return self.nome
 
-### 3. Aplicação artigos
+class Livro(models.Model):
+    titulo = models.CharField(max_length=200)
+    data_publicacao = models.DateField()
+    autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
+    genero = models.CharField(max_length=100)
 
-Crie uma aplicação que permita armazenar artigos de vários autores. Inspire-se em blogs que conheça de modo a fazer uma modelação rica. deverá permitir, além dos posts, inserir comentários, e ratings. Insira 2 artigos, por exemplo, do blog medium ou Quora. 
+    def __str__(self):
+        return self.titulo
 
-Esta aplicação será integrada no seu projeto final, o seu protfolio. vAqui incluirá artigos que considera interessantes ligados com a Programação Web.
+class Leitor(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField()
+    data_associacao = models.DateField()
 
-# Submissão
+    def __str__(self):
+        return self.nome
 
-submeta o link da sua aplicação, assim como as credenciais de um superuser para aceder ao admin (username e password). Pode criar vários superusers
+class Emprestimo(models.Model):
+    livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
+    leitor = models.ForeignKey(Leitor, on_delete=models.CASCADE)
+    data_emprestimo = models.DateField()
+    data_devolucao = models.DateField(null=True, blank=True)
 
-<!-- 
+    def __str__(self):
+        return f"{self.leitor} emprestou {self.livro}"
+```
 
-### 4. Aplicação curso (a desenvolver até 21.3)
 
-crie uma aplicação que permita definir um curso, suas disciplinas, seus docentes e projetos. Inspire-se nesta [página](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e [nesta](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/)
+### 1. Manipulação do modelo das bandas
+
+Para a modelação das bandas que realizou na ficha anterior, redija um conjunto de perguntas sobre os dados às quais deverá responder usando os métodos ORM que aprendeu. Crie 10 perguntas que explorem todos os métodos. Exemplos de perguntas: 
+* listar o nome dos álbuns de uma banda, ordenados cronológicamente
+* apresentar todos os álbuns lançados em 2020
+* uma playlist de um album, i.e., a lista dos links das músicas.
+* listar os albuns com músicas que durem mais de 5 minutos
+* listar os albuns com capa
+
+### 2. Aplicação curso
+
+Crie uma aplicação que permita definir um curso, suas disciplinas, seus docentes e projetos. Inspire-se nesta [página](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e [nesta](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/)
 
 Algumas ideias:
-* uma disciplina tem um conjunto de docentes
-* um docente pode lecionar várias disciplinas
 * uma disciplina tem um conjunto de informações tais como ano, semestre, programa.
-* uma disciplina pode ter um ou mais projetos
-* cada projeto pode ter descrição, imagem, url para repo no github, informação de tecnologias usadas, um link para um video no yotube.
-* configure a aplicação admin de modo a listar informação util de cada classe e permitir pesquisas adequadas.
-* crie conteúdos de um par de disciplinas e seus projetos. Na proxima semana ser-lhe-ão facultados dados detalhados de seu curso e respetivas disciplinas, e implementará uma função para carregar esta informação na sua base de dados de forma automática.
+* uma disciplina tem um conjunto de docentes.
+* um docente pode lecionar várias disciplinas.
+* uma disciplina pode ter um ou mais projetos.
+* cada projeto pode ter uma descrição, conceitos aplicados da disciplina, informação de tecnologias usadas, imagem, link para um video no yotube e url para repo no github.
+* explore as configurações do interface web /admin, de modo a listar informação util de cada classe e permitir pesquisas adequadas.
+* Extraia dados do seu curso e respetivas disciplinas, e implemente uma função para carregar esta informação na sua base de dados de forma automática.
+* crie um script que integra um conjunto de instruções que exploram os métodos que aprendeu na aula, para extrair informação da base de dados. 
 
-Esta aplicação será integrada no seu projeto final, o seu protfolio. Será uma excelente carta de apresentação em entrevistas de emprego que permitirá mostrar os projetos que desenvolveu ao longo do seu curso.
+Esta aplicação será integrada no seu projeto final, o seu protfolio. Será uma excelente carta de apresentação em entrevistas de emprego onde poderá mostrar os projetos que desenvolveu ao longo do seu curso.
 
-
-
-
-### 5. Aplicação Mentoria
+<!--
+### 2. Aplicação Mentoria
 
 O Programa de Mentoría é um programa do DEISI de alunos para alunos, suportado por uma [aplicação](https://horarios.pythonanywhere.com/) em desenvolvimento no âmbito dum TFC. Explore a aplicação, fazendo login e pedindo recuperação da sua password com o email que está no Moodle. 
 
@@ -79,3 +95,7 @@ Crie uma aplicação que modele o programa de mentorias. Algumas ideias:
 * uma díade é um par (mentor,mentorando), que realiza sessões de mentoria em dias específicos
 * configure a aplicação admin de modo a listar informação util de cada classe e permitir pesquisas adequadas.
 -->
+
+# Submissão
+
+submeta o link da sua aplicação, assim como as credenciais de um superuser para aceder ao admin (username e password). Pode criar vários superusers

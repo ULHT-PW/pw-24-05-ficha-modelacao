@@ -1,7 +1,7 @@
 Univesidade Lusófona
 **Programação Web**
 
-# Ficha 5: Modelação em Django
+# Ficha 5: Modelação e Manipulação de dados em Django
 
 ### Objetivo:
 * familiarizar-se com a modelação e manipulação de modelos Django.
@@ -58,9 +58,20 @@ class Emprestimo(models.Model):
         return f"{self.leitor} emprestou {self.livro}"
 ```
 
+Implemente instruções que façam o seguinte:
 
+* Recuperar todos os autores de uma nacionalidade específica.
+* Encontrar o número total de livros emprestados por um determinado leitor.
+* Listar todos os livros emprestados a um leitor com um determinado endereço de e-mail.
+* Encontrar todos os livros publicados após uma data específica.
+* Recuperar todos os livros com seus autores e gêneros.
+* Listar todos os leitores que emprestaram livros publicados antes de 2010.
+* Encontrar o número de livros em cada gênero.
+* Listar todos os leitores que ainda não devolveram os livros emprestados.
+* Recuperar o autor de um livro específico.
+* Listar todos os leitores que emprestaram livros escritos por autores de uma nacionalidade específica.
 
-### 1. Manipulação do modelo das bandas
+### 2. Manipulação do modelo das bandas
 
 Para a modelação das bandas que realizou na ficha anterior, redija um conjunto de perguntas sobre os dados às quais deverá responder usando os métodos ORM que aprendeu. Crie pelo menos 10 perguntas que explorem todos os métodos do ORM Django. Exemplos de perguntas: 
 * listar o nome dos álbuns de uma banda, ordenados cronológicamente
@@ -69,7 +80,7 @@ Para a modelação das bandas que realizou na ficha anterior, redija um conjunto
 * listar os albuns com músicas que durem mais de 5 minutos
 * listar os albuns com capa
 
-### 2. Aplicação curso (componente do projeto parte 1)
+### 3. Aplicação curso (componente do projeto parte 1)
 
 A modelação que desenvolverá será usada na parte 1 do seu projeto, que será o seu portfólio.
 

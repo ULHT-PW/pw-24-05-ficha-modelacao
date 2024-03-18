@@ -5,7 +5,8 @@ Univesidade Lusófona
 
 ### Objetivo:
 * familiarizar-se com a modelação e manipulação de modelos Django.
-* Criar um projeto django diretamente no PythonAnywhere seguindo os passos apresentados na aula teória. Use como username o seu número.
+* Exercitar a manipulação de dados
+* trabalhar na aplicação bandas que desenvolveu.
 * Criar várias aplicações, centrando-se apenas na modelação e criação de alguns conteúdos usando a aplicação admin do Django, interface de administração da base de dados.
 * Criar scripts que façam manipulação de dados.
  
@@ -23,22 +24,22 @@ Exercite os métodos de ORM Django na aplicação [biblioteca](https://bibliotec
 
 ### 2. Manipulação do modelo das bandas
 
-Para a modelação das bandas que realizou na ficha anterior, partilhe-a com o ChatGPT e peça-lhe para fazer um JSON com 5 bandas de um género que gosta (por exemplo rock, ou funck, ou pop). Peça para identifdicar  a nacionalidade e ano de criação da banda), listando 15 discos dessas bandas, com o ano do lançamento e incluindo a lista de musicas de cada disco, incluindo a duração de cada musica.
+Para a modelação das bandas que realizou na ficha anterior, partilhe-a com o ChatGPT e peça-lhe para fazer um JSON com 10 bandas de um género que gosta (por exemplo rock, ou funck, ou pop), identificando a nacionalidade e ano de criação da banda. Peça para criar outro JSON com uma lista de pelo menos 20 discos dessas bandas, tendo para cada disco o titulo, ano do lançamento e a lista de musicas, incluindo o titulo e a duração.
 
-Carregue estes ficheiros na base de dados usando um script (ficheiro python) que deverá manipular através da shell:
+Carregue estes ficheiros na base de dados usando uma função num script (ficheiro python). Use o módulo json falado na aula (veja os slides). Deverá executar este script através da shell do django, que lança desta forma:
 
 ```Bash
 > python manage.py shell
 ```
 
-Na shell importar os modelos, o script, e correr a função, considerando que o ficheiro json está na pasta do script:
+Na shell, importe models e o script, e execute a função, considerando que o ficheiro json está na pasta do script:
 ```Python
 >>> from curso.models import *
 >>> import script_importacao.py
 >>> importar_curso("lei.json")
 ```
 
-redija 10 perguntas, às quais deverá responder usando os métodos ORM que aprendeu. Exemplos de perguntas: 
+Redija 10 perguntas, às quais deverá responder usando os métodos ORM que aprendeu. Experimente os métodos na Shell do django. Exemplos de perguntas: 
 * listar o nome dos álbuns de uma banda, ordenados cronológicamente
 * apresentar todos os álbuns lançados num determinado ano
 * criar uma playlist de um album, i.e., a lista dos links das músicas.
@@ -48,7 +49,7 @@ Irá desenvolver daqui a umas semanas esta aplicação, criando uma página de b
 
 ### 3. Aplicação curso (componente do projeto parte 1)
 
-A modelação que desenvolverá neste exercício será usada na parte 1 do seu projeto, que será o seu portfólio.
+A modelação que desenvolverá neste exercício será parte constituinte na parte 1 do seu projeto, que será o seu portfólio.
 
 A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](lei.json) e [LIG](lig.json). Analise o conteúdo do JSON, que se encontra renderizado na página de [LEI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e de [LIG](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/).
 

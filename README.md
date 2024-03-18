@@ -15,9 +15,10 @@ Univesidade Lusófona
 * siga os passos do [tutorial](pw-24-04-criacao-de-app-no-pc.pdf) para criar uma primeira aplicação em Django no seu PC
 -->
 
-### s
 
-Considere os seguintes modelos:
+### 1. Exercícios de métodos ORM
+
+Crie uma aplicaçãoo com os seguintes modelos:
 
 ```Python
 from django.db import models
@@ -58,9 +59,10 @@ class Emprestimo(models.Model):
 ```
 
 
+
 ### 1. Manipulação do modelo das bandas
 
-Para a modelação das bandas que realizou na ficha anterior, redija um conjunto de perguntas sobre os dados às quais deverá responder usando os métodos ORM que aprendeu. Crie 10 perguntas que explorem todos os métodos. Exemplos de perguntas: 
+Para a modelação das bandas que realizou na ficha anterior, redija um conjunto de perguntas sobre os dados às quais deverá responder usando os métodos ORM que aprendeu. Crie pelo menos 10 perguntas que explorem todos os métodos do ORM Django. Exemplos de perguntas: 
 * listar o nome dos álbuns de uma banda, ordenados cronológicamente
 * apresentar todos os álbuns lançados em 2020
 * uma playlist de um album, i.e., a lista dos links das músicas.
@@ -73,40 +75,34 @@ A modelação que desenvolverá será usada na parte 1 do seu projeto, que será
 
 A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](lei.json) e [LIG](lig.json). Analise o conteúdo do JSON, que se encontra renderizado na página de [LEI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e de [LIG](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/).
 
-Crie uma aplicação que modele o seu curso (LEI ou LIG), modelando e extraindo os elementos que considera mais interessantes (apresentação, objetivos, competências, entre outros) e as suas disciplinas.
+Crie uma aplicação que modele o seu curso (LEI ou LIG):
+* crie a classe curso com os elementos mais interessantes do curso (apresentação, objetivos, competências).
+* crie uma classe área cientifica. Uma disciplina tem uma área científica.
+* crie uma classe para as disciplinas, onde armazenará informação da disciplina (nome, ano, semestre, ects e curricularIUnitReadableCode). Inclua um campo para a área científica da disciplina (veja áreas na página do [curso](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares).
+* Crie uma classe projeto que permita registar informação sobre o projeto que fez para uma determinada disciplina (uma disciplina tem um único projeto). Sugere-se que tenha os atributos dos projetos do [DEISI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares/), tais como descrição, conceitos aplicados da disciplina, informação de tecnologias usadas, imagem, link para um video demonstrativo de 1 minuto no yotube, incluindo também link para o repositório GitHub do projeto, caso exista. 
+* crie uma classe linguagem de programação. Lembre-se que nalgumas disciplinas e projetos utiliza mais do que uma linguagem de programação. Referencie nos projetos as linguagens usadas.
+* crie uma classe docente. Uma disciplina tem um conjunto de docentes, e um docente pode lecionar várias disciplinas.
 
-Deverá criar uma classe para as disciplinas, onde armazenará informação
-
-Crie uma classe projeto que tenha os atributos dos projetos do [DEISI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares/) e esteja associada à classe disciplina assim como linguagem de programação (relação MAnyToMany, pois por exemplo em Programação Web aprenderá várias linguagens).
-
-
-
-Faça uma 
-
-Algumas ideias:
-* uma disciplina tem um conjunto de informações tais como ano, semestre, programa.
-* uma disciplina tem um conjunto de docentes.
-* um docente pode lecionar várias disciplinas.
-* uma disciplina pode ter um ou mais projetos.
-* cada projeto pode ter uma descrição, conceitos aplicados da disciplina, informação de tecnologias usadas, imagem, link para um video no yotube e url para repo no github.
+Em relação à visualiação no interface web /admin:
 * explore as configurações do interface web /admin, de modo a listar informação util de cada classe e permitir pesquisas adequadas.
 * Extraia dados do seu curso e respetivas disciplinas, e implemente uma função para carregar esta informação na sua base de dados de forma automática.
 * crie um script que integra um conjunto de instruções que exploram os métodos que aprendeu na aula, para extrair informação da base de dados. 
 
+Escreva um script, script_importacao.py, com a função importar_curso(ficheiro_json) que servirá para importar os dados do curso para a base de dados. Para o utilizar deverá abrir a shell:
+
+```Bash
+> python manage.py shell
+```
+
+Na shell importar os modelos, o script, e correr a função, considerando que o ficheiro json está na pasta do script:
+```Python
+>>> from curso.models import *
+>>> import script_importacao.py
+>>> importar_curso("lei.json")
+```
+
 Esta aplicação será integrada no seu projeto final, o seu protfolio. Será uma excelente carta de apresentação em entrevistas de emprego onde poderá mostrar os projetos que desenvolveu ao longo do seu curso.
 
-<!--
-### 2. Aplicação Mentoria
-
-O Programa de Mentoría é um programa do DEISI de alunos para alunos, suportado por uma [aplicação](https://horarios.pythonanywhere.com/) em desenvolvimento no âmbito dum TFC. Explore a aplicação, fazendo login e pedindo recuperação da sua password com o email que está no Moodle. 
-
-Esta aplicação congregará artigos que considera interessantes, na área da programação web.
-
-Crie uma aplicação que modele o programa de mentorias. Algumas ideias:
-* um aluno pode ser mentor/mentorando de uma ou mais disciplinas
-* uma díade é um par (mentor,mentorando), que realiza sessões de mentoria em dias específicos
-* configure a aplicação admin de modo a listar informação util de cada classe e permitir pesquisas adequadas.
--->
 
 # Submissão
 

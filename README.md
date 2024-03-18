@@ -67,12 +67,17 @@ Para a modelação das bandas que realizou na ficha anterior, redija um conjunto
 * listar os albuns com músicas que durem mais de 5 minutos
 * listar os albuns com capa
 
-### 2. Aplicação curso
+### 2. Aplicação curso (componente do projeto parte 1)
 
-A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](ULHT12--InformaticadeGestao-PT.json) e LIG.
-É igualmente disponibilizada informação sobre projetos.
+A modelação que desenvolverá será usada na parte 1 do seu projeto, que será o seu portfólio.
 
-Crie uma aplicação que permita definir um curso, suas disciplinas e projetos. Inspire-se nesta [página](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e [nesta](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/)
+A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](lei.json) e [LIG](lig.json). Analise o conteúdo do JSON, que se encontra renderizado na página de [LEI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e de [LIG](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/).
+
+Crie uma aplicação que modele o seu curso (LEI ou LIG), modelando e extraindo os elementos que considera mais interessantes (apresentação, objetivos, competências, entre outros) e as suas disciplinas.
+
+Deverá criar uma classe para as disciplinas, onde armazenará informação
+
+Crie uma classe projeto que tenha os atributos dos projetos do [DEISI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares/) e esteja associada à classe disciplina assim como linguagem de programação (relação MAnyToMany, pois por exemplo em Programação Web aprenderá várias linguagens).
 
 
 

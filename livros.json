@@ -1,0 +1,155 @@
+[
+    {
+        "titulo": "Ensaio sobre a Cegueira",
+        "autor": "José Saramago",
+        "genero": "Romance",
+        "ano_publicacao": 1995,
+        "editora": "Caminho",
+        "isbn": "978-972-21-1001-4"
+    },
+    {
+        "titulo": "Memorial do Convento",
+        "autor": "José Saramago",
+        "genero": "Romance histórico",
+        "ano_publicacao": 1982,
+        "editora": "Caminho",
+        "isbn": "978-972-21-0065-7"
+    },
+    {
+        "titulo": "O Ano da Morte de Ricardo Reis",
+        "autor": "José Saramago",
+        "genero": "Romance",
+        "ano_publicacao": 1984,
+        "editora": "Caminho",
+        "isbn": "978-972-21-0336-8"
+    },
+    {
+        "titulo": "A Terceira Margem do Rio",
+        "autor": "João Guimarães Rosa",
+        "genero": "Conto",
+        "ano_publicacao": 1962,
+        "editora": "Nova Fronteira",
+        "isbn": "978-85-209-1890-7"
+    },
+    {
+        "titulo": "O Evangelho Segundo Jesus Cristo",
+        "autor": "José Saramago",
+        "genero": "Romance",
+        "ano_publicacao": 1991,
+        "editora": "Caminho",
+        "isbn": "978-972-21-1100-4"
+    },
+    {
+        "titulo": "O Nome da Rosa",
+        "autor": "Umberto Eco",
+        "genero": "Ficção histórica",
+        "ano_publicacao": 1980,
+        "editora": "Editorial Presença",
+        "isbn": "978-972-23-0621-1"
+    },
+    {
+        "titulo": "Os Maias",
+        "autor": "Eça de Queirós",
+        "genero": "Romance",
+        "ano_publicacao": 1888,
+        "editora": "Portugália",
+        "isbn": "978-989-615-106-1"
+    },
+    {
+        "titulo": "Viagens na Minha Terra",
+        "autor": "Almeida Garrett",
+        "genero": "Romance de viagem",
+        "ano_publicacao": 1846,
+        "editora": "Portugália",
+        "isbn": "978-972-0-01385-8"
+    },
+    {
+        "titulo": "Livro do Desassossego",
+        "autor": "Fernando Pessoa",
+        "genero": "Romance",
+        "ano_publicacao": 1982,
+        "editora": "Ática",
+        "isbn": "978-972-36-0089-4"
+    },
+    {
+        "titulo": "O Cavaleiro da Dinamarca",
+        "autor": "Sophia de Mello Breyner Andresen",
+        "genero": "Conto",
+        "ano_publicacao": 1964,
+        "editora": "Portugália",
+        "isbn": "978-972-0-02865-3"
+    },
+    {
+        "titulo": "O Primo Basílio",
+        "autor": "Eça de Queirós",
+        "genero": "Romance",
+        "ano_publicacao": 1878,
+        "editora": "Editorial Presença",
+        "isbn": "978-989-641-726-7"
+    },
+    {
+        "titulo": "A Cidade e as Serras",
+        "autor": "Eça de Queirós",
+        "genero": "Romance",
+        "ano_publicacao": 1901,
+        "editora": "Editorial Presença",
+        "isbn": "978-972-23-0519-1"
+    },
+    {
+        "titulo": "Os Lusíadas",
+        "autor": "Luís de Camões",
+        "genero": "Epopeia",
+        "ano_publicacao": 1572,
+        "editora": "Editorial Caminho",
+        "isbn": "978-972-21-1081-6"
+    },
+    {
+        "titulo": "Amor de Perdição",
+        "autor": "Camilo Castelo Branco",
+        "genero": "Romance",
+        "ano_publicacao": 1862,
+        "editora": "Edições Almedina",
+        "isbn": "978-972-40-1952-3"
+    },
+    {
+        "titulo": "Sinais de Fogo",
+        "autor": "Jorge de Sena",
+        "genero": "Romance",
+        "ano_publicacao": 1979,
+        "editora": "Assírio & Alvim",
+        "isbn": "978-972-37-0126-2"
+    },
+    {
+        "titulo": "Equador",
+        "autor": "Miguel Sousa Tavares",
+        "genero": "Romance",
+        "ano_publicacao": 2003,
+        "editora": "Gradiva",
+        "isbn": "978-989-616-103-8"
+    },
+    {
+        "titulo": "A Relíquia",
+        "autor": "Eça de Queirós",
+        "genero": "Romance",
+        "ano_publicacao": 1887,
+        "editora": "Portugália",
+        "isbn": "978-972-0-01751-1"
+    },
+    {
+        "titulo": "O Fio das Missangas",
+        "autor": "Mia Couto",
+        "genero": "Romance",
+        "ano_publicacao": 2009,
+        "editora": "Caminho",
+        "isbn": "978-972-21-2155-0"
+    },
+    {
+        "titulo": "Um Rio Chamado Tempo, uma Casa Chamada Terra",
+        "autor": "Mia Couto",
+        "genero": "Romance",
+        "ano_publicacao": 2002,
+        "editora": "Caminho",
+        "isbn": "978-972-21-1331-9"
+    },
+    {
+        "titulo": "Terra Sonâ

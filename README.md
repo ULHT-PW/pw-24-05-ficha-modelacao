@@ -69,7 +69,14 @@ Para a modelação das bandas que realizou na ficha anterior, redija um conjunto
 
 ### 2. Aplicação curso
 
-Crie uma aplicação que permita definir um curso, suas disciplinas, seus docentes e projetos. Inspire-se nesta [página](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e [nesta](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/)
+A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de LEI e LIG.
+É igualmente disponibilizada informação sobre projetos.
+
+Crie uma aplicação que permita definir um curso, suas disciplinas e projetos. Inspire-se nesta [página](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e [nesta](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/)
+
+
+
+Faça uma 
 
 Algumas ideias:
 * uma disciplina tem um conjunto de informações tais como ano, semestre, programa.

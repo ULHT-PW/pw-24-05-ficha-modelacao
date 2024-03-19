@@ -24,7 +24,7 @@ Exercite os métodos de ORM Django na aplicação [biblioteca](https://bibliotec
 
 ### 2. Manipulação do modelo das bandas
 
-Para a modelação das bandas que realizou na ficha anterior, partilhe-a com o ChatGPT e peça-lhe para fazer um JSON com 10 bandas de um género que gosta (por exemplo rock, ou funck, ou pop), identificando a nacionalidade e ano de criação da banda. Peça para criar outro JSON com uma lista de pelo menos 20 discos dessas bandas, tendo para cada disco o titulo, ano do lançamento e a lista de musicas, incluindo o titulo e a duração.
+Copie a modelação das bandas que realizou na ficha anterior e partilhe-a no ChatGPT para que o ajude a ampliar a base de dados. Peça-lhe para criar um JSON com 10 bandas de um género que gosta (por exemplo rock, ou funck, ou pop), pedidno para que identifique a nacionalidade e ano de criação da banda. Peça para criar outro JSON com uma lista de pelo menos 20 discos dessas bandas, tendo para cada disco o titulo, ano do lançamento e a lista de musicas, incluindo o titulo e a duração.
 
 Carregue estes ficheiros na base de dados usando uma função num script (ficheiro python). Use o módulo json falado na aula (veja os slides). Deverá executar este script através da shell do django, que lança desta forma:
 
@@ -40,12 +40,14 @@ Na shell, importe models e o script, e execute a função, considerando que o fi
 ```
 
 Redija 10 perguntas, às quais deverá responder usando os métodos ORM que aprendeu. Experimente os métodos na Shell do django. Exemplos de perguntas: 
+* listar o nome das bandas, ordenadas alfabéticamente
 * listar o nome dos álbuns de uma banda, ordenados cronológicamente
-* apresentar todos os álbuns lançados num determinado ano
+* apresentar todos os álbuns que foram lançados entre dois anos à sua escolha.
 * criar uma playlist de um album, i.e., a lista dos links das músicas.
 * listar os albuns com músicas que durem mais de 5 minutos
+#* listar todas as músicas que tenham uma determinada palavra
 
-Irá desenvolver daqui a umas semanas esta aplicação, criando uma página de bandas de um estilo que gosta, integrando um player.
+Irá desenvolver daqui a umas semanas ainda mais esta aplicação, criando uma página de bandas de um estilo que gosta, integrando um player.
 
 ### 3. Aplicação curso (componente do projeto parte 1)
 

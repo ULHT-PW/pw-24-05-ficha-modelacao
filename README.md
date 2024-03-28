@@ -24,6 +24,8 @@ Exercite os métodos de ORM Django na aplicação [biblioteca](https://bibliotec
 
 ### 2. Manipulação do modelo das bandas
 
+Veja o [Tutorial de importação de ficheiros JSON na BD duma webApp](https://github.com/ULHT-PW/importar-json)
+
 Copie a modelação das bandas que realizou na ficha anterior e partilhe-a no ChatGPT para que o ajude a ampliar a base de dados. Peça-lhe para criar um JSON com 10 bandas de um género que gosta (por exemplo rock, ou funck, ou pop), pedidno para que identifique a nacionalidade e ano de criação da banda. Peça para criar outro JSON com uma lista de pelo menos 20 discos dessas bandas, tendo para cada disco o titulo, ano do lançamento e a lista de musicas, incluindo o titulo e a duração.
 
 Carregue estes ficheiros na base de dados usando uma função num script (ficheiro python). Use o módulo json falado na aula (veja os slides). Deverá executar este script através da shell do django, que lança desta forma:

@@ -55,7 +55,7 @@ Irá desenvolver daqui a umas semanas ainda mais esta aplicação, criando uma p
 
 A modelação que desenvolverá neste exercício será parte constituinte na parte 1 do seu projeto, que será o seu portfólio.
 
-A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](lei.json) e [LIG](lig.json). Analise o conteúdo do JSON, que se encontra renderizado na página de [LEI](https://informatica.ulusofona.pt/projetos-de-unidades-curriculares) e de [LIG](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/).
+A Lusófona tem endpoints que fornecem informação no formato JSON sobre os seus cursos. Está disponível neste repositório informação sobre os cursos de [LEI](lei.json) e [LIG](lig.json). Analise o conteúdo do JSON, que se encontra renderizado na página de [LEI](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/) e de [LIG](https://informatica.ulusofona.pt/ensino/licenciaturas/engenharia-informatica/](https://informatica.ulusofona.pt/ensino/licenciaturas/informatica-de-gestao/).
 
 Crie uma aplicação que modele o seu curso (LEI ou LIG):
 * crie a classe curso com os elementos mais interessantes do curso (apresentação, objetivos, competências).

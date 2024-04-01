@@ -17,9 +17,9 @@ Univesidade Lusófona
 -->
 
 
-### 1. Exercícios de métodos ORM
+### 1. Django ORM... Quiz Time!
 
-Exercite os métodos de ORM Django na aplicação [biblioteca](https://bibliotecadeisi.pythonanywhere.com/shell/). Quando responder a tudo, imprima o ficheiro e submeta-o no Moodle. 
+Exercite os métodos de ORM Django respondendo ao [Quizz](https://djangoorm.pythonanywhere.com/). 
 
 
 ### 2. Manipulação do modelo das bandas
